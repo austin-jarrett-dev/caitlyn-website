@@ -40,3 +40,47 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+###########
+# ANGULAR #
+###########
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist/
+/tmp/
+/out-tsc/
+
+# dependencies
+/node_modules/
+package-lock.json
+
+# testing
+/karma.conf.js
+/tsconfig.spec.json
+/setupJest.ts
+/jest.config.js
+/src/test.ts
+/src/polyfills.ts
+
+# IDEs and editors
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*.dstore
+*.ds_store
+
+# misc
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment variables
+.env
+.env.prod
+.env.prod.local
+.env.staging
+.env.staging.local
+.env.development
+.env.development.local
