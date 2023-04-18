@@ -1,0 +1,9 @@
+.active {
+  color: var(--blood-red-hex) !important;
+  font-weight: 700;
+}
+
+nav .nav-item a {
+  color: var(--mint-green-hex);
+}
+

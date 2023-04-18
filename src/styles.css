@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'assets/css/bootstrap.css';
+@import "assets/css/bootstrap/bootstrap.css";
+
+:root {
+  --blood-red-hex: #880808;
+  --mint-green-hex: #daf7a6;
+  --golden-yellow-hex: #ffc300;
+  --red-orange-hex: #ff5733;
+  --red-hex: #c70039;
+  --brick-red-hex: #900c3f;
+}
