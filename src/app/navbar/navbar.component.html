@@ -1,56 +1,60 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img
-        src="/assets/chicken-farm-logo.svg"
-        alt="Chicken Farm Logo"
-        height="50px"
-      />
-      {{ brandText | uppercase }}</a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarLinks"
-      aria-controls="navbarLinks"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+      <img src="/assets/chicken-farm-logo.svg" alt="Chicken Farm Logo" height="50px" />
+      {{ brandText | uppercase }}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+      aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarLinks">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-current="page"
-            routerLink="/home"
-            routerLinkActive="active"
-          >
+          <button class="nav-link btn btn-link" routerLink="/home" routerLinkActive="active">
             {{ homepageTitle | uppercase }}
-          </a>
+          </button>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link dropdown-toggle" type="button" id="orderDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            {{ orderTitle | uppercase }}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="orderDropdown">
+            <li><button class="dropdown-item" routerLink="/order/chicken">Order Chicken</button></li>
+            <li><button class="dropdown-item" routerLink="/order/turkey">Order Turkey</button></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link btn btn-link dropdown-toggle" type="button" id="infoDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            {{ infoTitle | uppercase }}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="infoDropdown">
+            <li><button class="dropdown-item" routerLink="/info/prices">Prices</button></li>
+            <li><button class="dropdown-item" routerLink="/info/growers">Your Growers</button></li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">{{
-            aboutTitle | uppercase
-          }}</a>
+          <button class="nav-link btn btn-link" routerLink="/beef" routerLinkActive="active">
+            {{ beefTitle | uppercase }}
+          </button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{
-            contactTitle | uppercase
-          }}</a>
+          <button class="nav-link btn btn-link" routerLink="/blog" routerLinkActive="active">
+            {{ blogTitle | uppercase }}
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn btn-link" routerLink="/contact" routerLinkActive="active">
+            {{ contactTitle | uppercase }}
+          </button>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <button class="btn btn-success" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </nav>
