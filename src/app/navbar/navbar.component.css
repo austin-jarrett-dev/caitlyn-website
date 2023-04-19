@@ -1,9 +1,11 @@
-.active {
-  color: var(--blood-red-hex) !important;
-  font-weight: 700;
-}
-
-nav .nav-item a {
+nav .nav-item button:not(.active-link) {
   color: var(--mint-green-hex);
+  font-weight: 500;
 }
 
+li.dropdown.active-link button.nav-link,
+li.active-link button.active-link,
+.active-link {
+  color: var(--blood-red-hex) !important;
+  font-weight: 800;
+}

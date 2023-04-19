@@ -1,52 +1,122 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/assets/chicken-farm-logo.svg" alt="Chicken Farm Logo" height="50px" />
+      <img
+        src="/assets/chicken-farm-logo.svg"
+        alt="Chicken Farm Logo"
+        height="50px"
+      />
       {{ brandText | uppercase }}
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
-      aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarLinks"
+      aria-controls="navbarLinks"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarLinks">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <button class="nav-link btn btn-link" routerLink="/home" routerLinkActive="active">
+          <button
+            class="nav-link btn btn-link"
+            routerLink="/"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             {{ homepageTitle | uppercase }}
           </button>
         </li>
-        <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link dropdown-toggle" type="button" id="orderDropdown"
-            data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown" routerLinkActive="active-link">
+          <button
+            class="nav-link btn btn-link dropdown-toggle"
+            type="button"
+            id="orderDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
             {{ orderTitle | uppercase }}
           </button>
           <ul class="dropdown-menu" aria-labelledby="orderDropdown">
-            <li><button class="dropdown-item" routerLink="/order/chicken">Order Chicken</button></li>
-            <li><button class="dropdown-item" routerLink="/order/turkey">Order Turkey</button></li>
+            <li>
+              <button
+                class="dropdown-item"
+                routerLink="/order/chicken"
+                routerLinkActive="active-link"
+              >
+                {{ chickenTitle | uppercase }}
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                routerLink="/order/turkey"
+                routerLinkActive="active-link"
+              >
+                {{ turkeyTitle | uppercase }}
+              </button>
+            </li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <button class="nav-link btn btn-link dropdown-toggle" type="button" id="infoDropdown"
-            data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown" routerLinkActive="active-link">
+          <button
+            class="nav-link btn btn-link dropdown-toggle"
+            type="button"
+            id="infoDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
             {{ infoTitle | uppercase }}
           </button>
           <ul class="dropdown-menu" aria-labelledby="infoDropdown">
-            <li><button class="dropdown-item" routerLink="/info/prices">Prices</button></li>
-            <li><button class="dropdown-item" routerLink="/info/growers">Your Growers</button></li>
+            <li>
+              <button
+                class="dropdown-item"
+                routerLink="/info/prices"
+                routerLinkActive="active-link"
+              >
+                {{ pricesTitle | uppercase }}
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                routerLink="/info/yourGrowers"
+                routerLinkActive="active-link"
+              >
+                {{ yourGrowersTitle | uppercase}}
+              </button>
+            </li>
           </ul>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn btn-link" routerLink="/beef" routerLinkActive="active">
+          <button
+            class="nav-link btn btn-link"
+            routerLink="/beef"
+            routerLinkActive="active-link"
+          >
             {{ beefTitle | uppercase }}
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn btn-link" routerLink="/blog" routerLinkActive="active">
+          <button
+            class="nav-link btn btn-link"
+            routerLink="/blog"
+            routerLinkActive="active-link"
+          >
             {{ blogTitle | uppercase }}
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn btn-link" routerLink="/contact" routerLinkActive="active">
+          <button
+            class="nav-link btn btn-link"
+            routerLink="/contact"
+            routerLinkActive="active-link"
+          >
             {{ contactTitle | uppercase }}
           </button>
         </li>
