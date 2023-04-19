@@ -1,0 +1,28 @@
+.pattern-background {
+  background-image: url('/assets/maze.jpg');
+  background-size: contain;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.container {
+  overflow: auto;
+  height: 100vh;
+}
+
+.box {
+  height: 75vh;
+  z-index: -2;
+}
+
+.box:nth-child(even){
+  background-color: #fffa;
+}
+.box:nth-child(odd){
+  background-color: #f22b;
+}
