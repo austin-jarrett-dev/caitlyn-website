@@ -1,1 +1,75 @@
-<p>turkey works!</p>
+<div class="container mt-4">
+  <h1>Order Turkey</h1>
+  <p>Fill out the form below to place your order for delicious turkey:</p>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" required />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" class="form-control" id="phone" required />
+    </div>
+    <div class="form-group">
+      <label for="address">Delivery Address:</label>
+      <textarea class="form-control" id="address" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="size">Size:</label>
+      <select class="form-control" id="size" required>
+        <option value="">Select a size</option>
+        <option value="small">Small (feeds 4-6 people)</option>
+        <option value="medium">Medium (feeds 8-10 people)</option>
+        <option value="large">Large (feeds 12-14 people)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="stuffing">Stuffing:</label>
+      <select class="form-control" id="stuffing" required>
+        <option value="">Select a stuffing</option>
+        <option value="traditional">Traditional</option>
+        <option value="cornbread">Cornbread</option>
+        <option value="sausage">Sausage</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sides">Sides:</label>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="mashed potatoes"
+          id="mashed-potatoes"
+        />
+        <label class="form-check-label" for="mashed-potatoes">
+          Mashed Potatoes
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="green beans"
+          id="green-beans"
+        />
+        <label class="form-check-label" for="green-beans"> Green Beans </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="sweet potatoes"
+          id="sweet-potatoes"
+        />
+        <label class="form-check-label" for="sweet-potatoes">
+          Sweet Potatoes
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Order</button>
+  </form>
+</div>
